@@ -3,7 +3,7 @@
       "test": {
         "scripts": {
           "test-setup": "npm install",
-          "test": "ng test"
+          "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage"
         }
       }
     }
