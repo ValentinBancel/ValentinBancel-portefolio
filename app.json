@@ -2,8 +2,8 @@
     "environments": {
       "test": {
         "scripts": {
-          "test-setup": "gem install rubocop",
-          "test": "rubocop ."
+          "test-setup": "npm install",
+          "test": "ng test"
         }
       }
     }
