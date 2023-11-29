@@ -8,7 +8,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "heroku-prebuild": "npm install -g @angular/cli && npm install -g puppeteer",
-    "test": "ng test --browsers=ChromeHeadless --watch=false",
+    "test": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "heroku-setup": "node heroku-setup.js"
   },
   "private": true,
