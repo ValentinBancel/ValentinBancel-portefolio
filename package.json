@@ -8,7 +8,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test-prod": "ng test --watch=false --browsers=puppeteer --progress=false --code-coverage"
+    "test-prod": "ng test --watch=false --progress=false --code-coverage"
   },
   "private": true,
   "dependencies": {
