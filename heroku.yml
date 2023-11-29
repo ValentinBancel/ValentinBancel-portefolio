@@ -1,0 +1,10 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+  config:
+    CHROME_BIN: google-chrome-stable
+test:
+  script:
+    - npm run heroku-prebuild
+    - npm run heroku-setup
+    - npm run test
