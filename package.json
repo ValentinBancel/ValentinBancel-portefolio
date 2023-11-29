@@ -8,7 +8,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test-prod": "ng test --watch=false --browsers=ChromeHeadless --progress=false --code-coverage"
+    "test-prod": "ng test --watch=false --browsers=puppeteer --progress=false --code-coverage"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "puppeteer": "^21.5.2",
     "typescript": "~5.1.3"
   }
 }
