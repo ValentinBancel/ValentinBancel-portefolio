@@ -1,7 +1,7 @@
 // karma.conf.js
 const puppeteer = require('puppeteer');
 
-process.env.CHROME_BIN  =  require('puppeteer').executablePath();
+process.env.CHROME_BIN  =  pupperteer.executablePath();
 console.log(require('puppeteer').executablePath());
 
 
