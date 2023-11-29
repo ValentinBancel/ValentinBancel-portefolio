@@ -2,7 +2,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "echo 'Setup for test environment'",
+        "test-setup": "snap install chrome",
         "test": "npm run test"
       }
     }

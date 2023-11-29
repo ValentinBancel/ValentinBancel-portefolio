@@ -2,6 +2,7 @@
 const puppeteer = require('puppeteer');
 
 process.env.CHROME_BIN  =  require('puppeteer').executablePath();
+console.log(require('puppeteer').executablePath());
 
 
 module.exports = function(config) {
