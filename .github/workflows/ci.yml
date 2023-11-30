@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '*'  # ou la branche que vous souhaitez surveiller
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.17.1'  # Choisissez la version de Node.js dont vous avez besoin
+
+    - name: Installer les dépendances
+      run: npm install
+
+    - name: Exécuter les tests
+      run: npm test
