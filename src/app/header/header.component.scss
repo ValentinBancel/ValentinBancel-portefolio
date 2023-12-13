@@ -1,0 +1,9 @@
+@import '../../styles.scss';
+
+button {
+    background-color: $background;
+    color: $text;
+}
+button:hover {
+    color: $text;
+}
