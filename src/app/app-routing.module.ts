@@ -13,6 +13,14 @@ const routes: Routes = [
 		component: HomePageComponent
 	},
 	{
+		path: 'about-me',
+		component: HomePageComponent
+	},
+	{
+		path: 'project',
+		component: HomePageComponent
+	},
+	{
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full'
