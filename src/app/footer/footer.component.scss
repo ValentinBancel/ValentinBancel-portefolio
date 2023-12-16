@@ -1,0 +1,10 @@
+@import '../../variable.scss';
+
+html {
+    background-color: $background;
+}
+
+body {
+    background-color: $background;
+    color: $text;
+}
