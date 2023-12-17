@@ -7,8 +7,12 @@
     object-fit: cover; // Ajustez la propriété d'ajustement de l'objet selon vos besoins
 }
 
-html {
+.html_header {
     background-color: $background;
+}
+
+.nav-container {
+    border-bottom: 3px solid $demarcation; /* Change the color and size as needed */
 }
 
 .button-text {
