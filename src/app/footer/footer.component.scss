@@ -9,6 +9,10 @@ body {
     color: $text;
 }
 
+.nav-container {
+    border-top: 3px solid $demarcation; /* Change the color and size as needed */
+}
+
 .linkedin_logo {
     width: 3vw;
     height: auto;
