@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-	home_classe: string = 'button-text col-start-10';
-	about_me_classe: string = 'button-text col-start-11';
-	project_classe: string = 'button-text col-start-12';
+	home_classe: string = '';
+	about_me_classe: string = '';
+	project_classe: string = '';
 	actual_route: string = '';
 
 	constructor(private router: Router) {
