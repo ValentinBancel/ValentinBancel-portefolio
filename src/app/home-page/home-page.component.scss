@@ -1,0 +1,35 @@
+@import "../../variable.scss";
+
+.html_page {
+    // background-color: $background;
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+}
+
+h1 {
+    color: $text;
+}
+h4 {
+    color: $text;
+}
+
+.container {
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+}
+.picture {
+    width: 50vw;
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+}
+.text {
+    width: 50vw;
+    min-width: 50vw;
+}
+.sizing_flex {
+    width: 100vw;
+    height: 80vh;
+}
