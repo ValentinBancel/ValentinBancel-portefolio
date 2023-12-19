@@ -6,15 +6,15 @@ on:
       - '*'  # ou la branche que vous souhaitez surveiller
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout du code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18.17.1'  # Choisissez la version de Node.js dont vous avez besoin
 
@@ -23,3 +23,21 @@ jobs:
 
     - name: Exécuter les tests
       run: npm test
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.10.0'  # Choisissez la version de Node.js dont vous avez besoin
+
+    - name: Installer les dépendances
+      run: npm install
+
+    - name: Exécuter les tests
+      run: npm run build

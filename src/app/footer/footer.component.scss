@@ -1,0 +1,32 @@
+@import '../../variable.scss';
+
+html {
+    background-color: $background;
+}
+
+body {
+    background-color: $background;
+    color: $text;
+}
+
+.nav-container {
+    border-top: 3px solid $demarcation; /* Change the color and size as needed */
+}
+
+.linkedin_logo {
+    width: 2vw;
+    height: auto;
+    border-radius: 10%;
+}
+
+.github_logo {
+    width: 2vw;
+    height: auto;
+    border-radius: 15%;
+}
+
+.malt_logo {
+    width: 2vw;
+    height: auto;
+    border-radius: 15%;
+}
