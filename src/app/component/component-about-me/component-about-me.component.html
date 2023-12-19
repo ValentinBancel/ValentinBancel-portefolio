@@ -1,0 +1,27 @@
+<html class="background">
+    <body class="mt-14 mb-14">
+        <div *ngIf="history.length > 1">
+            <div *ngFor="let story of history">
+                <div class="flex flex-1 justify-around content-center mb-12">
+                    <div class="text-center ml-24">
+                        <p class="w-96 mt-12">{{ story[0] }}</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="{{ story[1] }}" alt="image" class="w-48 mr-24"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="history.length < 2">
+            <div class="flex flex-1 justify-around content-center">
+                <div class="text-center ml-24">
+                    <p class="w-96 mt-12">{{ history[0][0] }}</p>
+                </div>
+                <div class="text-center mr-24">
+                    <img src="{{ history[0][1] }}" alt="image" class="w-48"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

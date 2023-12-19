@@ -1,0 +1,13 @@
+@import '../../../variable.scss';
+
+.background {
+    background-color: $background;
+    color: $text;
+    width: 100vw;
+    height: 76vh;
+}
+
+.picture_size {
+    width: 30%;
+    height: auto;
+}
