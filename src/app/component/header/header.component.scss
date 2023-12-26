@@ -1,0 +1,33 @@
+@import '../../../variable.scss';
+
+.logo {
+    width: 45%;  // La largeur de l'image sera égale à la largeur du conteneur
+    height: auto; // La hauteur s'ajustera proportionnellement pour conserver le rapport d'aspect
+    border-radius: 50%; // Assurez-vous que l'image elle-même est également ronde
+    object-fit: cover; // Ajustez la propriété d'ajustement de l'objet selon vos besoins
+}
+
+.html_header {
+    background-color: $background;
+}
+
+.nav-container {
+    border-bottom: 3px solid $demarcation; /* Change the color and size as needed */
+}
+
+.button-text {
+    color: $text;
+}
+
+.button-text:hover {
+    color: $hover_button;
+}
+
+.active {
+    background-color: $active_button;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.disabled-click {
+    pointer-events: none;
+}
