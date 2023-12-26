@@ -35,4 +35,23 @@ describe('ComponentAboutMeComponent', () => {
     component.history = newHistory;
     expect(component.history).toEqual(newHistory);
   });
+
+  it('should initialize finalHistory as history when history length is less than 2', () => {
+    component.history = [[{ text: 'Test1', image: 'Test1.jpg' }]];
+    component.ngOnInit();
+    expect(component.finalHistory).toEqual(component.history);
+  });
+
+  it('test with one history', () => {
+    component.history = [['Test1','Test1.jpg' ]];
+    component.ngOnInit();
+    expect(component.finalHistory[0]).toEqual(component.history[0]);
+  })
+  
+  it('test with many history', () => {
+    component.history = [['Test1', 'Test1.jpg' ], ['Test2','Test2.jpg' ], ['Test3','Test3.jpg' ]];
+    component.ngOnInit();
+    expect(component.finalHistory[1]).toEqual(component.history[0]);
+    expect(component.finalHistory[2]).toEqual(component.history[1]);
+  });
 });
