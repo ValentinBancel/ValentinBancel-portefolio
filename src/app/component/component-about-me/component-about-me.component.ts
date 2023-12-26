@@ -24,8 +24,4 @@ export class ComponentAboutMeComponent implements OnInit{
     console.log(this.history)
     console.log(this.finalHistory)
   }
-
-  // public checkOrderElememt(elementList: []): boolean {
-  //   if (elementList[0].start)
-  // }
 }
