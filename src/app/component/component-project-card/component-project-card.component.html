@@ -11,7 +11,7 @@
     </div>
     <div class="margin-card">
         <div *ngIf="projectsListe.length == 1" class="">
-            <a [href]="link">
+            <a [href]="projectsListe[0].link">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
                     <img class="w-full" src="{{projectsListe[0].image}}" alt="Card Image">
                     <div class="px-6 py-4">
@@ -20,24 +20,22 @@
                     </div>
                     <div class="px-6 py-4 flex flex-wrap">
                         <span *ngFor="let tag of projectsListe[0].tags" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#{{tag}}</span>
-                        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag2</span> -->
                     </div>
                 </div>
             </a>
         </div>
         <div *ngIf="projectsListe.length >= 2" class="flex">
             <div *ngFor="let projet of projectsListe" class="margin-card">    
-                <a [href]="link" target="_blank">
+                <a [href]="projet.link" target="_blank">
                     <div class="max-w-sm rounded overflow-hidden shadow-lg">
                         <img class="w-full" src="{{projet.image}}" alt="Card Image">
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">{{projet.title}}</div>
                             <p class="text-white text-base">{{projet.description}}</p>
                         </div>
-                        <!-- <div class="px-6 py-4">
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag1</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag2</span>
-                        </div> -->
+                        <div class="px-6 py-4 flex flex-wrap">
+                            <span *ngFor="let tag of projet.tags" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#{{tag}}</span>
+                        </div>
                     </div>
                 </a>
                 
