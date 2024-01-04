@@ -1,1 +1,48 @@
-<p>component-project-card works!</p>
+<!DOCTYPE html>
+<html lang="en" class="html_classes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Card</title>
+</head>
+<body class="flex justify-center">
+    <div *ngIf="projectsListe.length == 0" class="min-h-screen flex items-center justify-center">
+        <h1 class="text-center text-9xl pb-52">No project found</h1>
+    </div>
+    <div class="margin-card">
+        <div *ngIf="projectsListe.length == 1" class="">
+            <a [href]="link">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="{{projectsListe[0].image}}" alt="Card Image">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">{{projectsListe[0].title}}</div>
+                        <p class="text-white text-base">{{projectsListe[0].description}}</p>
+                    </div>
+                    <div class="px-6 py-4 flex flex-wrap">
+                        <span *ngFor="let tag of projectsListe[0].tags" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">#{{tag}}</span>
+                        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag2</span> -->
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div *ngIf="projectsListe.length >= 2" class="flex">
+            <div *ngFor="let projet of projectsListe" class="margin-card">    
+                <a [href]="link" target="_blank">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                        <img class="w-full" src="{{projet.image}}" alt="Card Image">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">{{projet.title}}</div>
+                            <p class="text-white text-base">{{projet.description}}</p>
+                        </div>
+                        <!-- <div class="px-6 py-4">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag1</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag2</span>
+                        </div> -->
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
