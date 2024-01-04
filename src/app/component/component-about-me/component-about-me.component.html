@@ -1,0 +1,39 @@
+<html class="background">
+    <body class="mt-14 mb-14">
+        <div *ngIf="history.length > 1">
+            <div *ngFor="let story of finalHistory; let even = even; let odd = odd">
+                <div *ngIf="even">
+                    <div class="flex flex-1 justify-around content-center mb-12">
+                        <div class="text-center ml-24">
+                            <p class="w-96 mt-24">{{ story[0] }}</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="{{ story[1] }}" alt="image" class="w-48 mr-24"/>
+                        </div>
+                    </div>
+                </div> 
+                <div *ngIf="!even">
+                    <div class="flex flex-1 justify-around content-center mb-12">
+                        <div class="text-center  ml-52">
+                            <img src="{{ story[0] }}" alt="image" class="w-48"/>
+                        </div>
+                        <div class="text-center ml-24">
+                            <p class="w-96 mt-24">{{ story[1] }}</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div *ngIf="history.length < 2">
+            <div class="flex flex-1 justify-around content-center">
+                <div class="text-center ml-24">
+                    <p class="w-96 mt-12">{{ finalHistory[0][0] }}</p>
+                </div>
+                <div class="text-center mr-24">
+                    <img src="{{ finalHistory[0][1] }}" alt="image" class="w-48"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
