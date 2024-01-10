@@ -29,24 +29,24 @@ describe('HeaderComponent', () => {
 	  it('should set home_classe to active when route is /home', () => {
 		const router = { url: '/home' } as Router;
 		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('active disabled-click text-white');
-		expect(component.about_me_classe).toBe('button-text');
-		expect(component.project_classe).toBe('button-text');
+		expect(component.home_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.about_me_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.project_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
 	  });
 	
 	  it('should set about_me_classe to active when route is /about-me', () => {
 		const router = { url: '/about-me' } as Router;
 		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('button-text');
-		expect(component.about_me_classe).toBe('active disabled-click text-white');
-		expect(component.project_classe).toBe('button-text');
+		expect(component.home_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.about_me_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.project_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
 	  });
 	
 	  it('should set project_classe to active when route is /project', () => {
 		const router = { url: '/project' } as Router;
 		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('button-text');
-		expect(component.about_me_classe).toBe('button-text');
-		expect(component.project_classe).toBe('active disabled-click text-white');
+		expect(component.home_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.about_me_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
+		expect(component.project_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
 	  });
 });
