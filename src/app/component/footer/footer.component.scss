@@ -13,20 +13,18 @@ body {
     border-top: 3px solid $demarcation; /* Change the color and size as needed */
 }
 
-.linkedin_logo {
-    width: 2vw;
-    height: auto;
-    border-radius: 10%;
-}
 
-.github_logo {
-    width: 2vw;
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* or any other width you prefer */
     height: auto;
     border-radius: 15%;
+    overflow: hidden; /* This is to ensure the border-radius is applied correctly */
 }
 
-.malt_logo {
-    width: 2vw;
+.linkedin_logo, .github_logo, .malt_logo {
+    width: 100%;
     height: auto;
-    border-radius: 15%;
 }
