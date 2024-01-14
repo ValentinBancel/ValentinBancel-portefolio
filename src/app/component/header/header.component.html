@@ -1,16 +1,16 @@
-<html class="html_header">
+<html class="html_header flex">
     <title>Home page</title>
     <body class="nav-container flex grid items-center justify-center grid-cols-12">
-        <div class="justify-self-stretch">
+        <div class="flex justify-self-stretch">
             <img class="logo ml-[27%] mt-[8%] mb-[10%]" src="../../assets/logo phoenix.png" alt="logo" />
         </div>
-        <div [class]="home_classe +' col-start-10 text-center h-8'" href="/home">
+        <div [class]="home_classe +' flex justify-center col-start-10 text-center h-8'" href="/home">
             <a href="/home">Home</a>
         </div>
-        <div [class]="about_me_classe +' col-start-11 text-center h-8'" href="/about-me">
+        <div [class]="about_me_classe +' flex justify-center col-start-11 text-center h-8'" href="/about-me">
             <a href="/about-me">About me</a>
         </div>
-        <div [class]="project_classe +' col-start-12 text-center h-8'" href="/project">
+        <div [class]="project_classe +' flex justify-center col-start-12 text-center h-8'" href="/project">
             <a href="/project">Project</a>
         </div>
     </body>
