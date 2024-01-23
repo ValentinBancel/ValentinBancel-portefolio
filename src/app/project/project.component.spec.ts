@@ -21,7 +21,7 @@ describe('ProjectComponent', () => {
     });
 
     it('should have a description', () => {
-    expect(component.ProjectList[0].description).toBe('DataLink is an custom ORM for multiple database. (Is not finished yet)');
+    expect(component.ProjectList[0].description).toBe('DataLink est un ORM custom pour multiple database. (Il est en cours de developpement)');
     });
 
     it('should have an image', () => {
