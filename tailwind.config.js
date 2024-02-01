@@ -10,7 +10,12 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'manroperegular': ['ManropeRegular', 'sans-serif'],
+        'HelveticaNeue': ['Helvetica Neue', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
