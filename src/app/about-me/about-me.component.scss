@@ -1,5 +1,9 @@
 @import '../../variable.scss';
-
+.html_page {
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+}
 .background {
     background-color: $background;
     color: $text;

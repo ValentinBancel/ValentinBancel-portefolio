@@ -1,36 +1,20 @@
 <html class="background">
-    <body class="flex mt-[3%] mb-[4%]">
-        <div *ngIf="history.length > 1">
-            <div *ngFor="let story of finalHistory; let even = even; let odd = odd">
-                <div *ngIf="even">
-                    <div class="flex flex-1 justify-around content-center mb-[4%]">
-                        <div class="flex text-center ml-[20%]">
-                            <p class="w-[65%] mt-[10%]">{{ story[0] }}</p>
-                        </div>
-                        <div class="flex text-center ml-[10%]">
-                            <img src="{{ story[1] }}" alt="image" class="picture_size"/>
-                        </div>
-                    </div>
-                </div>
-                <div *ngIf="!even">
-                    <div class="flex flex-1 justify-around content-center mb-[4%]">
-                        <div class="flex text-center ml-[25%]">
-                            <img src="{{ story[0] }}" alt="image" class="picture_size"/>
-                        </div>
-                        <div class="flex text-center">
-                            <p class="w-[60%] mt-[10%]">{{ story[1] }}</p>
-                        </div>
-                    </div>
-                </div>
+    <body class="">
+        <div *ngIf="history.length < 2">
+            <div class="mt-5">
+                <p class="font-manroperegular text-justify px-5">{{ finalHistory[0][0] }}</p>
+            </div>
+            <div class="flex justify-center items-center mt-5">
+                <img src="{{ finalHistory[0][1] }}" alt="image" class="w-auto h-96"/>
             </div>
         </div>
-        <div *ngIf="history.length < 2">
-            <div class="flex flex-1 justify-around content-center">
-                <div class="flex text-center ml-[6%]">
-                    <p class="flex w-96 mt-[12%]">{{ finalHistory[0][0] }}</p>
+        <div *ngIf="history.length > 1">
+            <div *ngFor="let story of history;">
+                <div class="mt-5">
+                    <p class="font-manroperegular text-justify px-5">{{ story[0] }}</p>
                 </div>
-                <div class="flex text-center mr-[6%]">
-                    <img src="{{ finalHistory[0][1] }}" alt="image" class="w-48"/>
+                <div class="flex justify-center items-center mt-5 mb-5">
+                    <img src="{{ story[1] }}" alt="image" class="w-auto h-96"/>
                 </div>
             </div>
         </div>
