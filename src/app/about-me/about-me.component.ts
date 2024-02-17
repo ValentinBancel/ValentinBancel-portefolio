@@ -10,8 +10,8 @@ import { ComponentAboutMeComponent } from 'app/component/component-about-me/comp
 })
 export class AboutMeComponent {
     Texte: string = 'J\'ai participer a un stage de pilotage de Formule3. Une monoplace de 300ch pour 500kg. C\'est une voiture de course qui peut atteindre les 215km/h.';
-    image: string = '../../assets/F3.jpg';
+    image: string = 'assets/F3.webp';
 
-    histroy:any = [[this.Texte, this.image],[this.Texte, this.image]]
+    histroy:any = [[this.Texte, this.image],[this.Texte,this.image]];
     // histroy:any = [[this.Texte, this.image],[this.Texte, this.image]]
 }

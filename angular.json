@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portefolio": {
+    "portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,9 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
-            "outputPath": "dist/portefolio",
+            "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -35,7 +35,14 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "buildOptimizer": true
           },
           "configurations": {
             "production": {
@@ -68,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portefolio:build:production"
+              "buildTarget": "portfolio:build:production"
             },
             "development": {
-              "browserTarget": "portefolio:build:development"
+              "buildTarget": "portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portefolio:build"
+            "buildTarget": "portfolio:build"
           }
         },
         "test": {

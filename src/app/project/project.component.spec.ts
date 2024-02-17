@@ -25,7 +25,7 @@ describe('ProjectComponent', () => {
     });
 
     it('should have an image', () => {
-    expect(component.ProjectList[0].image).toBe('../../../assets/Datalink_project.png');
+    expect(component.ProjectList[0].image).toBe('assets/Datalink_project.webp');
     });
 
     it('should have a link', () => {

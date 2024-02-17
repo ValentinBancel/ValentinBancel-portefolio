@@ -1,5 +1,5 @@
 {
-  "name": "portefolio",
+  "name": "portfolio",
   "version": "0.9.1",
   "scripts": {
     "ng": "ng",
@@ -24,6 +24,7 @@
     "@eslint/create-config": "^0.4.6",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
+    "ngx-build-plus": "^17.0.0",
     "path": "^0.12.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
