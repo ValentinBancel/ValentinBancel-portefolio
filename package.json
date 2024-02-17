@@ -8,10 +8,10 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
-    "dev:ssr": "ng run portefolio:serve-ssr",
-    "serve:ssr": "node dist/portefolio/server/main.js",
-    "build:ssr": "ng build && ng run portefolio:server",
-    "prerender": "ng run portefolio:prerender"
+    "dev:ssr": "ng run portfolio:serve-ssr",
+    "serve:ssr": "node dist/portfolio/server/main.js",
+    "build:ssr": "ng build && ng run portfolio:server",
+    "prerender": "ng run portfolio:prerender"
   },
   "private": true,
   "dependencies": {
@@ -65,7 +65,7 @@
     "webpack-cli": "^5.1.4"
   },
   "main": "server.js",
-  "repository": "git@github.com:ValentinBancel/ValentinBancel-portefolio.git",
+  "repository": "git@github.com:ValentinBancel/ValentinBancel-portfolio.git",
   "author": "valentinbancel <valentin.bancel@orange.fr>",
   "license": "MIT"
 }
