@@ -6,17 +6,17 @@
         <title>About me component</title>
     </head>
     <body class="text-[#E7DFDA] bg-[#171B26] h-full w-full">
-        <div *ngIf="history.length < 2" class="sm:flex sm:grid-cols-2 justify-center items-center">
-            <div class="sm:w-[50%] text-justify">
+        <div *ngIf="history.length < 2" class="sm:flex sm:grid sm:grid-cols-2 sm:content-center justify-center items-center">
+            <div class="sm:w-[80%] text-justify">
                 <p class="font-manroperegular text-justify px-5">{{ history[0][0] }}</p>
             </div>
-            <div class="flex justify-center items-center mt-5 sm:w-[50%]">
+            <div class="flex mt-5 sm:w-[50%]">
                 <img src="{{ history[0][1] }}" alt="image" class="w-auto h-96"/>
             </div>
         </div>
         <div *ngIf="history.length > 1">
             <div *ngFor="let story of history;" class="sm:flex sm:grid-cols-2 justify-center items-center">
-                <div class="mt-5">
+                <div class="mt-5 sm:w-[55%]">
                     <p class="font-manroperegular text-justify px-5 sm:max-w-[45%] text-justify">{{ story[0] }}</p>
                 </div>
                 <div class="flex justify-center items-center mt-5 mb-5">
