@@ -1,52 +1,43 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HeaderComponent } from './header.component';
+import { async,ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { HeaderComponent } from './header.component';
+
 
 describe('HeaderComponent', () => {
-	let component: HeaderComponent;
-	let fixture: ComponentFixture<HeaderComponent>;
-
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			declarations: [HeaderComponent]
-		});
-		fixture = TestBed.createComponent(HeaderComponent);
-		component = fixture.componentInstance;
-		fixture.detectChanges();
-	});
-
-	it('should create', () => {
-		expect(component).toBeTruthy();
-	});
-	
-	  it('should return the current route', () => {
-		const router = { url: '/home' } as Router;
-		component = new HeaderComponent(router);
-		expect(component.isCurrentRoute()).toBe('/home');
-	  });
-	
-	  it('should set home_classe to active when route is /home', () => {
-		const router = { url: '/home' } as Router;
-		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.about_me_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.project_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-	  });
-	
-	  it('should set about_me_classe to active when route is /about-me', () => {
-		const router = { url: '/about-me' } as Router;
-		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.about_me_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.project_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-	  });
-	
-	  it('should set project_classe to active when route is /project', () => {
-		const router = { url: '/project' } as Router;
-		component = new HeaderComponent(router);
-		expect(component.home_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.about_me_classe).toBe('button-text mr-[1%] ml-[1%] pt-[1%]');
-		expect(component.project_classe).toBe('active disabled-click text-white mr-[1%] ml-[1%] pt-[1%]');
-	  });
-});
+    let component: HeaderComponent;
+    let fixture: ComponentFixture<HeaderComponent>;
+    let router: Router;
+  
+    beforeEach(async(() => {
+      TestBed.configureTestingModule({
+        declarations: [ HeaderComponent ],
+        providers: [
+          { provide: Router, useClass: MockRouter }
+        ]
+      })
+      .compileComponents();
+    }));
+  
+    beforeEach(() => {
+      fixture = TestBed.createComponent(HeaderComponent);
+      component = fixture.componentInstance;
+      router = TestBed.inject(Router);
+      fixture.detectChanges();
+    });
+  
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  
+    it('should set actual_route to current route on creation', () => {
+      expect(component.actual_route).toEqual(router.url);
+    });
+  
+    it('isCurrentRoute should return current route', () => {
+      expect(component.isCurrentRoute()).toEqual(router.url);
+    });
+  });
+  
+  class MockRouter {
+    public url = '/mock-url';
+  }

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr" class="background">
+<html lang="fr" class="bg-[#171B26]">
 <head>
+    <title>À propos de moi | Valentin Bancel - Créateur engagé</title>
+    <base href="/home">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#1976d2">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apprenez à me connaître ! Je suis Valentin Bancel, un créateur passionné par l'innovation et l'impact positif. Découvrez mon parcours, mes valeurs et mes motivations. Rejoignez-moi dans ma mission pour un monde meilleur. Cliquez ici pour en savoir plus !">
 </head>
-<body>
-    <app-header></app-header>
-    <app-component-about-me [history]="histroy"></app-component-about-me>
-    <app-footer></app-footer>
+<app-header></app-header>
+<body class="sm:h-full">
+    <div>
+        <app-component-about-me [history]="histroy"></app-component-about-me>
+    </div>
 </body>
+<app-footer></app-footer>
 </html>
 

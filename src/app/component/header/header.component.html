@@ -1,17 +1,17 @@
-<html class="html_header flex">
+<html>
     <title>Home page</title>
-    <body class="nav-container flex grid items-center justify-center grid-cols-12">
-        <div class="flex justify-self-stretch">
-            <img class="logo ml-[27%] mt-[8%] mb-[10%]" src="../../assets/logo phoenix.png" alt="logo" />
+    <body class="flex grid grid-cols-4 sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
+        <div>
+            <img class="flex m-2 w-auto h-12" src="../../assets/logo_phoenix.webp" alt="logo" />
         </div>
-        <div [class]="home_classe +' flex justify-center col-start-10 text-center h-8'" href="/home">
-            <a href="/home">Home</a>
+        <div class="flex justify-center sm:col-start-10 items-center text-white" href="/home">
+            <a [class]="actual_route == '/home' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'p-2 font-HelveticaNeue' "  href="/home">Home</a>
         </div>
-        <div [class]="about_me_classe +' flex justify-center col-start-11 text-center h-8'" href="/about-me">
-            <a href="/about-me">About me</a>
+        <div class="flex justify-center items-center text-white" href="/about-me">
+            <a [class]="actual_route == '/about-me' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/about-me">About me</a>
         </div>
-        <div [class]="project_classe +' flex justify-center col-start-12 text-center h-8'" href="/project">
-            <a href="/project">Project</a>
+        <div class="flex justify-center items-center text-white" href="/project">
+            <a [class]="actual_route == '/project' ? 'button-text disabled-click active p-2 ont-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/project">Project</a>
         </div>
     </body>
 </html>
