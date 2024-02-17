@@ -10,5 +10,6 @@ export class ComponentAboutMeComponent implements OnInit{
   @Input() history: any = [[]] ;
   public finalHistory: any = [] ;
   ngOnInit(): void {
+    console.log(this.history[0][0]);
   }
 }
