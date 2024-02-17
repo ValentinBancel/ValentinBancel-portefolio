@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  portefolio_webapp:
+  portfolio_webapp:
     build: 
       context: .
       dockerfile: dockerfile

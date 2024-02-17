@@ -1,4 +1,4 @@
-# Portefolio
+# Portfolio
 
 This project is a portfolio website built with Angular, TypeScript, and Yarn.
 
