@@ -7,7 +7,7 @@ import { EMPTY } from 'rxjs';
   styleUrl: './component-about-me.component.scss'
 })
 export class ComponentAboutMeComponent implements OnInit{
-  @Input() history: any = [[]] ;
+  @Input() history: any = [] ;
   public finalHistory: any = [] ;
   ngOnInit(): void {
   }
