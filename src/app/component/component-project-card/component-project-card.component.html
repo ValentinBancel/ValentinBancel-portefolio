@@ -1,33 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr" class="html_classes">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project Card</title>
     </head>
-    <body class="flex justify-center">
-        <div *ngIf="projectsListe.length == 0" class="flex items-center justify-center mt-[20%]">
-            <h1 class="text-center text-9xl">No project found</h1>
-        </div>
-        <div class="margin-card">
-            <div class="flex flex-wrap justify-center item-center content-center">
-                <div *ngFor="let projet of projectsListe" class="w-full sm:w-1/2 p-2">    
-                    <a [href]="projet.link" target="_blank">
-                        <div class="rounded overflow-hidden shadow-lg mx-auto">
-                            <div class="flex m-2">
-                                <img class="flex justify-center items-center w-auto h-52" src="{{projet.image}}">
-                                <div class="px-[4%] py-[3%]">
-                                    <div class="font-bold text-xl mb-[2%]">{{projet.title}}</div>
-                                    <p class="text-white text-base">{{projet.description}}</p>
-                                </div>
-                            </div>
-                            <div class="px-[4%] py-[3%] flex flex-wrap">
-                                <span *ngFor="let tag of projet.tags" class="bg-gray-200 rounded-full px-[3%] py-[1%] text-sm font-semibold text-gray-700 mr-[2%] mt-[2%]">#{{tag}}</span>
-                            </div>
-                        </div>
-                    </a>
+    <body class="bg-[#2D364B] text-[#E7DFDA] flex justify-center max-w-md m-4 rounded-lg sm:max-w-2xl sm:grid">
+        <a [href]="project.link" target="_blank">
+            <div class="rounded overflow-hidden shadow-lg mx-auto">
+                <div class="flex m-2">
+                    <img class="flex justify-center items-center w-auto h-52" src="{{project.image}}" alt="project_picture">
+                    <div class="px-[4%] py-[3%]">
+                        <div class="font-bold text-xl mb-[2%]">{{project.title}}</div>
+                        <p class="text-white text-base">{{project.description}}</p>
+                    </div>
+                </div>
+                <div class="px-[4%] py-[3%] flex flex-wrap">
+                    <span *ngFor="let tag of project.tags" class="bg-gray-200 rounded-full px-[3%] py-[1%] text-sm font-semibold text-gray-700 mr-[2%] mt-[2%]">#{{tag}}</span>
                 </div>
             </div>
-        </div>
+        </a>
     </body>
 </html>

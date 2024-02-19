@@ -10,17 +10,17 @@
         <meta content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Bienvenue sur mon site ! Découvrez mon univers passionnant dédié à l'innovation et à la créativité. Explorez mes projets, mon parcours et mes aspirations. Rejoignez-moi dans cette aventure inspirante dès maintenant !">
     </head>
-    <app-header class="sm:h-[5%]"></app-header>
-    <body class="sm:h-[80%] mt-10 bg-[#171B26]">
-        <div class="sm:grid sm:grid-cols-2">
+    <body class="bg-[#171B26] flex flex-col justify-between min-h-screen">
+        <app-header></app-header>
+        <div class="sm:grid sm:grid-cols-2 sm:flex sm:justify-center flex-grow">
             <div class="grid sm:grid-rows-2 flex justify-center items-center w-full">
-                <h1 class="text-4xl text-center sm:mb-0">Valentin Bancel</h1>
-                <h1 class="flex text-2xl sm:mt-0">Full stack developper</h1>
+                <h1 class="text-4xl sm:text-6xl text-center sm:mb-0">Valentin Bancel</h1>
+                <h1 class="flex text-2xl sm:text-5xl sm:mt-0">Full stack developper</h1>
             </div>
             <div class="flex justify-center items-center my-5">
                 <img src="../../assets/me_crop.webp" alt="Valentin Bancel" class="rounded-[50%] w-auto h-96">
             </div>
         </div>
+        <app-footer></app-footer>
     </body>
-    <app-footer class=""></app-footer>
 </html>

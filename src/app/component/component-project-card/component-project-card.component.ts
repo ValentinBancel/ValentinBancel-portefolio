@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ComponentProjectCardComponent {
   // @Input() projectsListe: any;
-  @Input() projectsListe: any= []
+  @Input() project: any= []
   
   /*
   Info needed:
