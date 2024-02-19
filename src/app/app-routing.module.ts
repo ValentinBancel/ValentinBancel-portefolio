@@ -6,7 +6,7 @@ import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
 	{
-		path: 'home',
+		path: '',
 		component: HomePageComponent
 	},
 	{
@@ -17,11 +17,6 @@ const routes: Routes = [
 		path: 'project',
 		component: ProjectComponent
 	},
-	{
-		path: '',
-		redirectTo: '/home',
-		pathMatch: 'full'
-	}
 ];
 
 @NgModule({
