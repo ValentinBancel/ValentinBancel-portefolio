@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="html_page">
+<html lang="fr">
 <head>
     <title>Découvrez mes projets innovants | Valentin Bancel</title>
     <base href="/home">
@@ -10,11 +10,13 @@
     <meta content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explorez mes projets créatifs et innovants qui repoussent les limites. Découvrez comment je donne vie à mes idées pour un avenir meilleur. Cliquez ici pour en savoir plus !">
 </head>
-<app-header></app-header>
-<body class="h-[70%] sm:h-[85%]">
-    <div class="h-full">
-        <app-component-project-card [projectsListe]="ProjectList"></app-component-project-card>
+<body class="min-h-screen bg-[#1B202D] flex flex-col justify-between">
+    <app-header></app-header>
+    <div class="flex flex-wrap justify-center sm:px-24">
+        <div *ngFor="let projet of ProjectList" class="lg:w-1/2">
+            <app-component-project-card [project]="projet"></app-component-project-card>
+        </div>
     </div>
+    <app-footer></app-footer>
 </body>
-<app-footer></app-footer>
 </html>
