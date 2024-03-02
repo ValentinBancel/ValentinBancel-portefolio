@@ -23,6 +23,5 @@ export class ProjectComponent {
   //   link: 'https://github.com/ValentinBancel/DataLink',
   //   tags: ['Python3', 'ORM', 'Database', "Neo4j", "PostgreSQL", "MySQL", "SQLite"],
   // }
-]
-
+  ]
 }

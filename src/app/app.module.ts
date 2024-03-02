@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectComponent } from './project/project.component';
-import { ComponentAboutMeComponent } from './component/component-about-me/component-about-me.component';
+import { CompetencesComponent } from './competences/competences.component';
 import { ComponentProjectCardComponent } from './component/component-project-card/component-project-card.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -18,10 +17,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 		HeaderComponent,
 		FooterComponent,
 		HomePageComponent,
-		AboutMeComponent,
 		ProjectComponent,
-		ComponentAboutMeComponent,
 		ComponentProjectCardComponent,
+		CompetencesComponent,
 	],
 	imports: [
 		BrowserModule,
