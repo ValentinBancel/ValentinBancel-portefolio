@@ -21,7 +21,14 @@ export class ProjectComponent {
   //   description: 'DataLink est un ORM custom pour multiple database. (Il est en cours de developpement)',
   //   image: 'assets/Datalink_project.webp',
   //   link: 'https://github.com/ValentinBancel/DataLink',
-  //   tags: ['Python3', 'ORM', 'Database', "Neo4j", "PostgreSQL", "MySQL", "SQLite"],
+  //   tags: ['Python3', 'ORM', 'Database'],
   // }
+  {
+    title: 'PDF-Tools',
+    description: "Ceci est un outil permettant de fusionner plusieurs fichier pdf en un seul ou d'extraires chaques pages d'un pdf en python.",
+    image: 'assets/pdf_logo.webp',
+    link: 'https://github.com/ValentinBancel/pdf_gen.git',
+    tags: ['Python3', 'PDF', 'Tools'],
+  }
   ]
 }
