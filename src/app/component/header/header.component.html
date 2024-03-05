@@ -4,12 +4,12 @@
         <div>
             <img class="flex m-2 w-auto h-14" src="../../assets/logo_phoenix.webp" alt="logo" />
         </div>
-        <div class="flex justify-center sm:col-start-11 items-center text-white" href="/">
+        <div class="flex justify-center sm:col-start-10 items-center text-white" href="/">
             <a [class]="actual_route == '/' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'p-2 font-HelveticaNeue' "  href="/">Home</a>
         </div>
-        <!-- <div class="flex justify-center items-center text-white" href="/competences">
-            <a [class]="actual_route == '/competences' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/competences">Competences</a>
-        </div> -->
+        <div class="flex justify-center items-center text-white" href="/achievement">
+            <a [class]="actual_route == '/achievement' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/achievement">Achievement</a>
+        </div>
         <div class="flex justify-center items-center text-white" href="/project">
             <a [class]="actual_route == '/project' ? 'button-text disabled-click active p-2 ont-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/project">Project</a>
         </div>
