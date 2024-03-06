@@ -7,9 +7,11 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProjectComponent } from './project/project.component';
-import { CompetencesComponent } from './competences/competences.component';
 import { ComponentProjectCardComponent } from './component/component-project-card/component-project-card.component';
+import { AchievementComponent } from './achievement/achievement.component';
+import { AchievementDisplay } from './component/achievement/achievement';
 import { ServiceWorkerModule } from '@angular/service-worker';
+
 
 @NgModule({
 	declarations: [
@@ -18,8 +20,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 		FooterComponent,
 		HomePageComponent,
 		ProjectComponent,
+		AchievementDisplay,
+		AchievementComponent,
 		ComponentProjectCardComponent,
-		CompetencesComponent,
 	],
 	imports: [
 		BrowserModule,

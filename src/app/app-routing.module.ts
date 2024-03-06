@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CompetencesComponent } from './competences/competences.component';
 import { ProjectComponent } from './project/project.component';
+import { AchievementComponent } from './achievement/achievement.component';
 
 const routes: Routes = [
 	{
@@ -10,8 +10,8 @@ const routes: Routes = [
 		component: HomePageComponent
 	},
 	{
-		path: 'competences',
-		component: CompetencesComponent
+		path: 'achievement',
+		component: AchievementComponent
 	},
 	{
 		path: 'project',
