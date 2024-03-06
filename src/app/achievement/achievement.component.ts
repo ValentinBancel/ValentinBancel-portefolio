@@ -17,7 +17,7 @@ export class AchievementComponent {
   public achievementList: Achievement[] = [
     {
       title: '',
-      image: 'assets/diplome/Diplome_Bac+3.jpeg'
+      image: 'assets/diplome/Diplome_Bac+3.webp'
     },
     {
       title: '',
