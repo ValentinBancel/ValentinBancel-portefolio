@@ -15,13 +15,17 @@ interface Achievement {
 })
 export class AchievementComponent {
   public achievementList: Achievement[] = [
-  {
-    title: '',
-    image: 'assets/diplome/Decouvrir_les_outils_du_referencement.webp'
-  },
-  // {
-  //   title: '',
-  //   image: 'assets/diplome/SEO_Comprendre_les_algorithmes_de_Google.webp'
-  // }
-]
+    {
+      title: '',
+      image: 'assets/diplome/Diplome_Bac+3.jpeg'
+    },
+    {
+      title: '',
+      image: 'assets/diplome/Decouvrir_les_outils_du_referencement.webp'
+    },
+    {
+      title: '',
+      image: 'assets/diplome/SEO_Comprendre_les_algorithmes_de_Google.webp'
+    },
+  ]
 }
