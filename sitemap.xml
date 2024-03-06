@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.valentin-bancel.tech/</loc>
-    <loc>https://www.valentin-bancel.tech/project</loc>
-    <loc>https://www.valentin-bancel.tech/about-me</loc>
-    <lastmod>2024-02-20</lastmod>
+    <lastmod>2024-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.valentin-bancel.tech/achievement/</loc>
+    <lastmod>2024-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.valentin-bancel.tech/project/</loc>
+    <lastmod>2024-06-04</lastmod>
   </url>
 </urlset>
