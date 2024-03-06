@@ -17,10 +17,6 @@ export class AchievementComponent {
   public achievementList: Achievement[] = [
     {
       title: '',
-      image: 'assets/diplome/Diplome_Bac+3.webp'
-    },
-    {
-      title: '',
       image: 'assets/diplome/Decouvrir_les_outils_du_referencement.webp'
     },
     {
