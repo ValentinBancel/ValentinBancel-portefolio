@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-achievement',
@@ -7,6 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './achievement.html',
   styleUrl: './achievement.scss'
 })
-export class AchievementDisplay {
+export class AchievementComponent {
   @Input() achievement: any;
 }
