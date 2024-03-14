@@ -10,6 +10,8 @@ interface Achievement {
 
 @Component({
   selector: 'app-achievement-component',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, AchievementDisplay],
   templateUrl: './achievement.component.html',
   styleUrl: './achievement.component.scss'
 })

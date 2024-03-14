@@ -4,6 +4,8 @@ import { FooterComponent } from '../component/footer/footer.component';
 import { ComponentProjectCardComponent } from '../component/component-project-card/component-project-card.component';
 @Component({
   selector: 'app-project',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

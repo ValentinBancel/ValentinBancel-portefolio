@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-component-project-card',
+  standalone: true,
+  imports: [],
   templateUrl: './component-project-card.component.html',
   styleUrl: './component-project-card.component.scss'
 })
