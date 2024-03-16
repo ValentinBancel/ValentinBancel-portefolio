@@ -1,17 +1,14 @@
-<html lang="fr">
-    <title>Home page</title>
-    <body class="flex grid grid-cols-4 sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
-        <div>
-            <img class="flex m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
-        </div>
-        <div class="flex justify-center sm:col-start-10 items-center text-white">
-            <a [class]="actual_route == '/' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'p-2 font-HelveticaNeue' "  href="/">Home</a>
-        </div>
-        <div class="flex justify-center items-center text-white">
-            <a [class]="actual_route == '/achievement' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/achievement">Achievement</a>
-        </div>
-        <div class="flex justify-center items-center text-white">
-            <a [class]="actual_route == '/project' ? 'button-text disabled-click active p-2 ont-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/project">Project</a>
-        </div>
-    </body>
-</html>
+<div class="flex grid grid-cols-4 sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
+    <div>
+        <img class="flex m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
+    </div>
+    <div class="flex justify-center sm:col-start-10 items-center text-white">
+        <a [class]="actual_route == '/' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'p-2 font-HelveticaNeue' "  href="/">Home</a>
+    </div>
+    <div class="flex justify-center items-center text-white">
+        <a [class]="actual_route == '/achievement' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/achievement">Achievement</a>
+    </div>
+    <div class="flex justify-center items-center text-white">
+        <a [class]="actual_route == '/project' ? 'button-text disabled-click active p-2 ont-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' " href="/project">Project</a>
+    </div>
+</div>

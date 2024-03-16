@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { HeaderComponent } from '../component/header/header.component';
 import { FooterComponent } from '../component/footer/footer.component';
 import { ComponentProjectCardComponent } from '../component/component-project-card/component-project-card.component';
@@ -6,7 +7,7 @@ import { ComponentProjectCardComponent } from '../component/component-project-ca
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent],
+  imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent, NgFor],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../component/header/header.component';
 import { FooterComponent } from '../component/footer/footer.component';
 import { AchievementComponent } from '../component/achievement/achievement';
+import { NgFor } from '@angular/common';
 
 interface Achievement {
   title: string;
@@ -11,7 +12,7 @@ interface Achievement {
 @Component({
   selector: 'app-archievement',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, AchievementComponent],
+  imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
   templateUrl: './archievement.component.html',
   styleUrl: './archievement.component.scss'
 })
