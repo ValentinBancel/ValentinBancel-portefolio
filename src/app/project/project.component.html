@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Découvrez mes projets innovants | Valentin Bancel</title>
-    <base href="/">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#1976d2">
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explorez mes projets créatifs et innovants qui repoussent les limites. Découvrez comment je donne vie à mes idées pour un avenir meilleur. Cliquez ici pour en savoir plus !">
-</head>
-<body class="min-h-screen bg-[#171B26] flex flex-col justify-between">
+<div class="min-h-screen bg-[#171B26] flex flex-col justify-between">
     <app-header></app-header>
     <div class="flex flex-wrap justify-center sm:px-24">
         <div *ngFor="let projet of ProjectList" class="lg:w-1/2">
@@ -18,5 +6,4 @@
         </div>
     </div>
     <app-footer></app-footer>
-</body>
-</html>
+</div>
