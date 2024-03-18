@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../component/footer/footer.component';
 import { HeaderComponent } from '../component/header/header.component';
-import { AchievementDisplay } from '../component/achievement/achievement';
+import { FooterComponent } from '../component/footer/footer.component';
+import { AchievementComponent } from '../component/achievement/achievement';
+import { NgFor } from '@angular/common';
 
 interface Achievement {
   title: string;
@@ -9,16 +10,14 @@ interface Achievement {
 }
 
 @Component({
-  selector: 'app-achievement-component',
-  templateUrl: './achievement.component.html',
-  styleUrl: './achievement.component.scss'
+  selector: 'app-archievement',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
+  templateUrl: './archievement.component.html',
+  styleUrl: './archievement.component.scss'
 })
-export class AchievementComponent {
+export class ArchievementComponent {
   public achievementList: Achievement[] = [
-    {
-      title: '',
-      image: 'assets/diplome/Diplome_Bac+3.webp'
-    },
     {
       title: '',
       image: 'assets/diplome/Decouvrir_les_outils_du_referencement.webp'
