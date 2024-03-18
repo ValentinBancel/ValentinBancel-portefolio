@@ -7,7 +7,7 @@
     "build": "ng build --progress --ssr --prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
-    "start": "node dist/valentin-bancel-portefolio/server/server.mjs"
+    "start": "node dist/valentin-bancel-portefolio/server/main.server.mjs"
   },
   "private": true,
   "dependencies": {
