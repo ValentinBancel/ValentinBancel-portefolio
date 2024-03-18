@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
-    "build": "ng build --progress --ssr --prerender",
+    "build": "ng build --progress --prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
-    "start": "node dist/valentin-bancel-portefolio/server/main.server.mjs"
+    "start": "node dist/valentin-bancel-portefolio/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
     "@angular/platform-server": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.3",
-    "express": "^4.18.2",
+    "express": "^4.18.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
