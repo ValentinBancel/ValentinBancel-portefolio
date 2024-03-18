@@ -19,13 +19,3 @@ export class HeaderComponent {
 		return this.router.url
 	}
 }
-
-
-/*
-'/' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'p-2 font-HelveticaNeue' "
-'/achievement' ? 'button-text disabled-click active p-2 font-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' "
-'/project' ? 'button-text disabled-click active p-2 ont-HelveticaNeue' : 'button-text p-2 font-HelveticaNeue' "
-
-
-
-*/
