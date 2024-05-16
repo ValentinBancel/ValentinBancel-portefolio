@@ -4,8 +4,9 @@ import { FooterComponent } from '../component/footer/footer.component';
 
 @Component({
   selector: 'app-home-page',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
 

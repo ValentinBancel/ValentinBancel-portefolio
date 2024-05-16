@@ -1,18 +1,3 @@
-@import '../../../variable.scss';
-
-.button-text {
-    color: $text;
-}
-
-.button-text:hover {
-    color: $hover_button;
-}
-
-.active {
-    background-color: $active_button;
-    border-radius: 50px;
-}
-
 .disabled-click {
     pointer-events: none;
 }

@@ -5,15 +5,11 @@
 /tmp
 /out-tsc
 /bazel-out
-.angular/
-
+*scannerwork/*
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
-
-#NPM
-package-lock.json
 
 # IDEs and editors
 .idea/
@@ -25,7 +21,6 @@ package-lock.json
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

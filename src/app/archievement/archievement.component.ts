@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../component/footer/footer.component';
 import { HeaderComponent } from '../component/header/header.component';
-import { AchievementDisplay } from '../component/achievement/achievement';
+import { FooterComponent } from '../component/footer/footer.component';
+import { AchievementComponent } from '../component/achievement/achievement';
+import { NgFor } from '@angular/common';
 
 interface Achievement {
   title: string;
@@ -9,11 +10,12 @@ interface Achievement {
 }
 
 @Component({
-  selector: 'app-achievement-component',
-  templateUrl: './achievement.component.html',
-  styleUrl: './achievement.component.scss'
+  selector: 'app-archievement',
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
+  templateUrl: './archievement.component.html',
 })
-export class AchievementComponent {
+export class ArchievementComponent {
   public achievementList: Achievement[] = [
     {
       title: '',
