@@ -2,8 +2,8 @@
 const express = require('express');
 const path = require('path');
 
-var RateLimit = require('express-rate-limit');
-var limiter = RateLimit({
+let RateLimit = require('express-rate-limit');
+let limiter = RateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // max 100 requests per windowMs
 });
