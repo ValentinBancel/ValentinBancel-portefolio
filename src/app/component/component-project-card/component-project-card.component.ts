@@ -6,7 +6,6 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor],
   templateUrl: './component-project-card.component.html',
-  styleUrl: './component-project-card.component.scss'
 })
 export class ComponentProjectCardComponent {
   @Input() project: any= []

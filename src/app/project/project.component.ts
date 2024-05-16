@@ -9,7 +9,6 @@ import { ComponentProjectCardComponent } from '../component/component-project-ca
   standalone: true,
   imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent, NgFor],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
   public ProjectList: any =   [

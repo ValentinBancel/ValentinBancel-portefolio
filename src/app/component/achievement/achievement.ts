@@ -5,7 +5,6 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './achievement.html',
-  styleUrl: './achievement.scss'
 })
 export class AchievementComponent {
   @Input() achievement: any;
