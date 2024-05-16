@@ -7,7 +7,6 @@ import { FooterComponent } from '../component/footer/footer.component';
   standalone: true,
   imports: [HeaderComponent, FooterComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
 

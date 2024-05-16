@@ -14,7 +14,6 @@ interface Achievement {
   standalone: true,
   imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
   templateUrl: './archievement.component.html',
-  styleUrl: './archievement.component.scss'
 })
 export class ArchievementComponent {
   public achievementList: Achievement[] = [
