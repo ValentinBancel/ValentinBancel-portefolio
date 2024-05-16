@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../component/footer/footer.component';
-import { HeaderComponent } from '../component/header/header.component';
-import { AchievementDisplay } from '../component/achievement/achievement';
 
 interface Achievement {
   title: string;
@@ -11,7 +8,6 @@ interface Achievement {
 @Component({
   selector: 'app-achievement-component',
   templateUrl: './achievement.component.html',
-  styleUrl: './achievement.component.scss'
 })
 export class AchievementComponent {
   public achievementList: Achievement[] = [
