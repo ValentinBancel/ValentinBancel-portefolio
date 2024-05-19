@@ -5,13 +5,6 @@ describe('ComponentProjectCardComponent', () => {
     let component: ComponentProjectCardComponent;
     let fixture: ComponentFixture<ComponentProjectCardComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [ ComponentProjectCardComponent ]
-        })
-        .compileComponents();
-    });
-
     beforeEach(() => {
         fixture = TestBed.createComponent(ComponentProjectCardComponent);
         component = fixture.componentInstance;
