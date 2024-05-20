@@ -6,5 +6,14 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.disabled-click': {
+          pointerEvents: 'none',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }
