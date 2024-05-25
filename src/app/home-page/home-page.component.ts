@@ -12,9 +12,9 @@ import { Meta } from '@angular/platform-browser';
 export class HomePageComponent {
 
   constructor(private meta: Meta) {
-    this.meta.addTag({ name: 'home_description', content: 'Is starting page of my portfolio.' });
-    this.meta.addTag({name:'home_title', content:'Portfolio home Page'})
-    this.meta.addTag({name:'home_keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack'})
+    this.meta.addTag({ name: 'description', content: 'Is starting page of my portfolio.' });
+    this.meta.addTag({name:'title', content:'Portfolio home Page'})
+    this.meta.addTag({name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack'})
   }
 
 }

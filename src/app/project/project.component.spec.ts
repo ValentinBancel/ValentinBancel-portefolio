@@ -34,25 +34,25 @@ describe('ProjectComponent', () => {
   });
 
   it('should add the description meta tag', () => {
-    const descriptionTag:any = meta.getTag('name="project_description"');
+    const descriptionTag:any = meta.getTag('name="description"');
     expect(descriptionTag).toBeTruthy();
     expect(descriptionTag.content).toBe('This is a list of my projects');
   });
 
   it('should add the title meta tag', () => {
-    const titleTag:any = meta.getTag('name="project_title"');
+    const titleTag:any = meta.getTag('name="title"');
     expect(titleTag).toBeTruthy();
     expect(titleTag.content).toBe('Portfolio Project Page');
   });
 
   it('should add the author meta tag', () => {
-    const titleTag:any = meta.getTag('name="project_author"');
+    const titleTag:any = meta.getTag('name="author"');
     expect(titleTag).toBeTruthy();
     expect(titleTag.content).toBe('Valentin Bancel');
   });
 
   it('should add the keywords meta tag', () => {
-    const keywordsTag:any = meta.getTag('name="project_keywords"');
+    const keywordsTag:any = meta.getTag('name="keywords"');
     expect(keywordsTag).toBeTruthy();
     expect(keywordsTag.content).toBe('Portfolio, Développeur web, Développeur informatique, Développeur full stack, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools');
   });
