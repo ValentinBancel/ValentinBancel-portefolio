@@ -14,10 +14,10 @@ import { Meta } from '@angular/platform-browser';
 export class ProjectComponent {
   constructor(private meta: Meta) {
     this.meta.addTags([
-      { name: 'description', content: 'This is a list of my projects' },
-      { name: 'title', content: 'Portfolio Project Page' },
-      { name: 'author', content: 'Valentin Bancel' },
-      {name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools'}
+      { name: 'project_description', content: 'This is a list of my projects' },
+      { name: 'project_title', content: 'Portfolio Project Page' },
+      { name: 'project_author', content: 'Valentin Bancel' },
+      {name:'project_keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools'}
     ]);
   }
   public ProjectList: any =   [
