@@ -13,6 +13,9 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ArchievementComponent {
   constructor(private meta: Meta) {
+    this.meta.removeTag('name="description"');
+    this.meta.removeTag('name="title"');
+    this.meta.removeTag('name="keywords"');
     this.meta.addTag({ name: 'description', content: 'Is the page where I show my achievements.' });
     this.meta.addTag({name:'title', content:'Portfolio Archievement Page'})
     this.meta.addTag({name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack, achievement, achievements'})

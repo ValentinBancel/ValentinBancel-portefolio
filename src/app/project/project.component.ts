@@ -13,6 +13,9 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ProjectComponent {
   constructor(private meta: Meta) {
+    this.meta.removeTag('name="description"');
+    this.meta.removeTag('name="title"');
+    this.meta.removeTag('name="keywords"');
     this.meta.addTags([
       { name: 'description', content: 'This is a list of my projects' },
       { name: 'title', content: 'Portfolio Project Page' },
