@@ -11,9 +11,16 @@ export function app(): express.Express {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
+  const RateLimit = require('express-rate-limit');
 
   const commonEngine = new CommonEngine();
 
+  const limiter = RateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 50, // max 100 requests per windowMs
+  });
+
+  server.use(limiter);
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
@@ -23,6 +30,15 @@ export function app(): express.Express {
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
+  // Route pour robots.txt
+  server.get('/robots.txt', (req, res) => {
+    res.sendFile(join(process.cwd(), 'src/assets/robots.txt'));
+  });
+
+  // Route pour sitemap.xml
+  server.get('/sitemap.xml', (req, res) => {
+    res.sendFile(join(process.cwd(), 'src/assets/sitemap.xml'));
+  });
 
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
@@ -48,9 +64,7 @@ function run(): void {
 
   // Start up the Node server
   const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
+  server.listen(port, () => {});
 }
 
 run();

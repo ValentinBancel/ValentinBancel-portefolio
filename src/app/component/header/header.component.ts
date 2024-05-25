@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   standalone: true,
   imports: [],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
 	actual_route: string = '';
