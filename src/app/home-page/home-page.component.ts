@@ -15,6 +15,7 @@ export class HomePageComponent {
     this.meta.addTag({ name: 'description', content: 'Is starting page of my portfolio.' });
     this.meta.addTag({name:'title', content:'Portfolio home Page'})
     // this.meta.addTag({name:'keywords', content:'portfolio, home, page, starting page, home page, portfolio home page, portfolio starting page, developpeur, developpeur web, developpeur web junior, developpeur web junior freelance, developpeur web junior freelance front-end, developpeur web junior freelance front-end react, developpeur web junior freelance front-end reactjs, developpeur web junior freelance front-end react.js, developpeur web junior freelance front-end react js, developpeur web junior freelance front-end'})
+    this.meta.addTag({name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack'})
   }
 
 }

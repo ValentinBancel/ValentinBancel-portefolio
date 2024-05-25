@@ -15,8 +15,9 @@ export class ProjectComponent {
   constructor(private meta: Meta) {
     this.meta.addTags([
       { name: 'description', content: 'This is a list of my projects' },
+      { name: 'title', content: 'Portfolio Project Page' },
       { name: 'author', content: 'Valentin Bancel' },
-      // { name: 'keywords', content: 'Valentin Bancel, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools' },
+      {name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools'}
     ]);
   }
   public ProjectList: any =   [
