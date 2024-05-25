@@ -13,8 +13,9 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ArchievementComponent {
   constructor(private meta: Meta) {
-    this.meta.addTag({ name: 'description', content: 'Is the page where I show my achievements.' });
-    this.meta.addTag({name:'title', content:'Portfolio Archievement Page'})
+    this.meta.addTag({ name: 'achievment_description', content: 'Is the page where I show my achievements.' });
+    this.meta.addTag({name:'achievment_title', content:'Portfolio Archievement Page'})
+    this.meta.addTag({name:'achievment_keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack, achievement, achievements'})
   }
   public achievementList: string[] = [
       'assets/diplome/Decouvrir_les_outils_du_referencement.webp',
