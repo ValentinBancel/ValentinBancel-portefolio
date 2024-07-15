@@ -25,11 +25,11 @@ export class ProjectComponent {
   }
   public ProjectList: any =   [
     {
-      title: 'Force de Van Der Whaal',
-      description: 'En C++, j\'ai réalisé un programme qui permet de calculer la force de Van Der Whaal entre deux molécules.',
+      title: 'Force de Van Der Waals',
+      description: 'En C++, j\'ai réalisé un programme qui permet de calculer la force de Van Der Waals entre deux molécules.',
       image: 'assets/logo_force_de_van_der_whaal.webp',
       link: 'https://github.com/ValentinBancel/Force_de_van_der_Waals',
-      tags: ["c++",'Physics', 'Van der whaal'],
+      tags: ["c++",'Physics', 'Van der waals'],
     },
     // {
     //   title: 'DataLink',
