@@ -4,4 +4,4 @@
 # to crawl them.
 User-agent: *
 
-Sitemap: https://www.valentin-bancel.tech/sitemap.xml
+Sitemap: https://www.valentin-bancel.com/sitemap.xml
