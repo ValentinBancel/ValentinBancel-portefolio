@@ -6,10 +6,9 @@ import { NgFor } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-archievement',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
-  templateUrl: './archievement.component.html',
+    selector: 'app-archievement',
+    imports: [HeaderComponent, FooterComponent, AchievementComponent, NgFor],
+    templateUrl: './archievement.component.html'
 })
 export class ArchievementComponent {
   constructor(private meta: Meta) {
