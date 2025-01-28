@@ -2,10 +2,9 @@ import { Component, Input } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-component-project-card',
-  standalone: true,
-  imports: [NgFor],
-  templateUrl: './component-project-card.component.html',
+    selector: 'app-component-project-card',
+    imports: [NgFor],
+    templateUrl: './component-project-card.component.html'
 })
 export class ComponentProjectCardComponent {
   @Input() project: any= []

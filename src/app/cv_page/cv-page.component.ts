@@ -4,10 +4,9 @@ import { FooterComponent } from '../component/footer/footer.component';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'cv-page',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './cv-page.component.html',
+    selector: 'cv-page',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './cv-page.component.html'
 })
 export class CvPageComponent {
 
