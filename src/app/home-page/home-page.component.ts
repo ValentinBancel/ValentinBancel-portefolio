@@ -4,10 +4,9 @@ import { FooterComponent } from '../component/footer/footer.component';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-home-page',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  templateUrl: './home-page.component.html',
+    selector: 'app-home-page',
+    imports: [HeaderComponent, FooterComponent],
+    templateUrl: './home-page.component.html'
 })
 export class HomePageComponent {
 

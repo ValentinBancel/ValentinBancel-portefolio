@@ -6,10 +6,9 @@ import { ComponentProjectCardComponent } from '../component/component-project-ca
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-project',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent, NgFor],
-  templateUrl: './project.component.html',
+    selector: 'app-project',
+    imports: [HeaderComponent, FooterComponent, ComponentProjectCardComponent, NgFor],
+    templateUrl: './project.component.html'
 })
 export class ProjectComponent {
   constructor(private meta: Meta) {
