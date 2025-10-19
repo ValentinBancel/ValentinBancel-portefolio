@@ -88,7 +88,27 @@ docker push your-registry/portfolio-webapp:latest
 
 ## Deployment
 
-### Option 1: Using kubectl
+### Option 1: Using the Deployment Script (Recommended)
+
+The easiest way to deploy is using the provided script:
+
+```bash
+# Deploy with default settings
+cd k8s
+./deploy.sh
+
+# Deploy with custom domain and namespace
+DOMAIN=myportfolio.com NAMESPACE=production ./deploy.sh
+```
+
+The script will:
+- Build the Docker image
+- Import it to micro-k8s
+- Deploy all Kubernetes resources
+- Wait for the deployment to be ready
+- Show the deployment status
+
+### Option 2: Using kubectl
 
 Deploy all manifests:
 
@@ -101,7 +121,7 @@ microk8s kubectl create namespace portfolio
 microk8s kubectl apply -f k8s/ -n portfolio
 ```
 
-### Option 2: Using Kustomize
+### Option 3: Using Kustomize
 
 ```bash
 # Deploy using kustomize
@@ -250,7 +270,21 @@ Both probes make HTTP GET requests to the root path `/`.
 
 ## Cleanup
 
-To remove the deployment:
+### Using the Cleanup Script
+
+The easiest way to remove the deployment:
+
+```bash
+cd k8s
+./cleanup.sh
+
+# Or for a specific namespace
+NAMESPACE=production ./cleanup.sh
+```
+
+### Manual Cleanup
+
+To remove the deployment manually:
 
 ```bash
 # Delete all resources
