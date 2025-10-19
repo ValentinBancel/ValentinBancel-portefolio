@@ -208,7 +208,11 @@ microk8s kubectl scale deployment/portfolio-webapp --replicas=1
 
 ## Troubleshooting
 
-### Certificate not being issued
+For comprehensive troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
+### Quick Troubleshooting
+
+#### Certificate not being issued
 
 Check cert-manager logs:
 
