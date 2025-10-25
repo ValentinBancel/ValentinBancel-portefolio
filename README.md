@@ -54,6 +54,28 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Deployment
+
+This application can be deployed to Kubernetes (micro-k8s) or run as a standalone Docker container.
+
+### Kubernetes Deployment
+
+For deploying to a Kubernetes cluster with cert-manager and ingress:
+
+```bash
+# Quick start
+microk8s kubectl apply -k k8s/
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions, or [k8s/README.md](k8s/README.md) for comprehensive Kubernetes documentation.
+
+### Docker Deployment
+
+```bash
+docker build -t portfolio-webapp:latest .
+docker run -p 4000:4000 portfolio-webapp:latest
+```
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
