@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:webapp": "node dist/webapp/server/server.mjs"
+    "serve:ssr:webapp": "node --optimize_for_size --max_old_space_size=920 dist/webapp/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
