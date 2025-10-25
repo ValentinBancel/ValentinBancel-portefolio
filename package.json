@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:webapp": "node --optimize_for_size --max_old_space_size=920 dist/webapp/server/server.mjs"
+    "serve:ssr:webapp": "node --optimize_for_size --max_old_space_size=920 dist/webapp/server/server.mjs",
+    "start": "node --optimize_for_size --max_old_space_size=920 dist/webapp/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
