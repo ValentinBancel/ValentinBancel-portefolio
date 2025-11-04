@@ -9,9 +9,6 @@
         <a class="{{actual_route == '/' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}} " href="/">Home</a>
     </div>
     <div class="flex justify-center items-center text-white">
-        <a class="{{actual_route == '/achievement' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/achievement">Achievement</a>
-    </div>
-    <div class="flex justify-center items-center text-white">
         <a class="{{actual_route == '/project' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 ont-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue' }}" href="/project">Project</a>
     </div>
     <div class="flex items-center text-white">
@@ -22,11 +19,12 @@
 <!-- Ths part of code is the pc version -->
 <div class="hidden sm:flex sm:flex-1 sm:justify-center sm:items-center sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
     <div>
-        <img class="m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
+        <a href="/" class="hover:pointer-event-auto">
+            <img class="m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
+        </a>
     </div>
     <div class="flex flex-1 justify-end space-x-4 mr-[2%]">
-        <a class="{{actual_route == '/' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/">Home</a>
-        <a class="{{actual_route == '/achievement' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/achievement">Achievement</a>
+        <!-- <a class="{{actual_route == '/' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/">Home</a> -->
         <a class="{{actual_route == '/project' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/project">Project</a>
         <a class="{{actual_route == '/cv' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/cv">My cv</a>
     </div>

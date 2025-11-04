@@ -43,6 +43,13 @@ export class ProjectComponent {
       image: 'assets/pdf_logo.webp',
       link: 'https://github.com/ValentinBancel/pdf_gen.git',
       tags: ['Python3', 'PDF', 'Tools'],
+    },
+    {
+      title: 'Isi-App',
+      description: "Isi-app est une solution complète pour piloter et sécuriser votre système d'information.",
+      image: 'https://isi-app.com/wp-content/uploads/2025/03/logo.svg',
+      link: 'https://isi-app.com/',
+      tags: ['Api', 'Médico social', 'SI', 'Fullstack', 'IA', 'BI'],
     }
     ]
 }
