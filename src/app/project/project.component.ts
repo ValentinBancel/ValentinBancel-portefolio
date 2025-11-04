@@ -30,13 +30,6 @@ export class ProjectComponent {
       link: 'https://github.com/ValentinBancel/Force_de_van_der_Waals',
       tags: ["c++",'Physics', 'Van der waals'],
     },
-    // {
-    //   title: 'DataLink',
-    //   description: 'DataLink est un ORM custom pour multiple database. (Il est en cours de developpement)',
-    //   image: 'assets/Datalink_project.webp',
-    //   link: 'https://github.com/ValentinBancel/DataLink',
-    //   tags: ['Python3', 'ORM', 'Database'],
-    // },
     {
       title: 'PDF-Tools',
       description: "Ceci est un outil permettant de fusionner plusieurs fichier pdf en un seul ou d'extraires chaques pages d'un pdf en python.",
