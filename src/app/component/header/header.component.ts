@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+
+interface NavItem {
+  label: string;
+  path: string;
+}
 
 @Component({
-    selector: 'app-header',
-    imports: [],
-    templateUrl: './header.component.html'
+  selector: 'app-header',
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-	actual_route: string = '';
+  navItems: NavItem[] = [
+    { label: 'Project', path: '/project' },
+    { label: 'My Cv', path: '/cv' }
+  ];
 
-	constructor(private router: Router) {
-		this.actual_route = this.isCurrentRoute();
-	}
+  constructor(private router: Router) {}
 
-	isCurrentRoute(): string {
-		return this.router.url
-	}
+  get currentRoute(): string {
+    return this.router.url;
+  }
 }

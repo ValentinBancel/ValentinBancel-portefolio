@@ -1,31 +1,39 @@
-<!-- This part of code is the mobile version -->
-<div class="sm:hidden flex grid grid-cols-5 sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
-    <div>
-        <a href="/" class="hover:pointer-event-auto">
-            <img class="flex m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
-        </a>
-    </div>
-    <div class="flex justify-center sm:col-start-9 items-center text-white">
-        <a class="{{actual_route == '/' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}} " href="/">Home</a>
-    </div>
-    <div class="flex justify-center items-center text-white">
-        <a class="{{actual_route == '/project' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 ont-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue' }}" href="/project">Project</a>
-    </div>
-    <div class="flex items-center text-white">
-        <a class="{{actual_route == '/cv' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 ont-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue' }}" href="/cv">My Cv</a>
-    </div>
+<!-- Mobile version -->
+<div class="flex sm:hidden grid-cols-5 gap-y-10 border-b-2 border-[#363F59] bg-[#171B26]">
+  <div>
+    <a routerLink="/" class="block">
+      <img class="m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
+    </a>
+  </div>
+  <nav class="flex flex-1 justify-around items-center">
+    @for (item of navItems; track item.path) {
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="bg-[#0266A8]"
+        class="text-[#E7DFDA] hover:text-[#0288E0] rounded-full px-3 py-2 font-HelveticaNeue transition-colors"
+      >
+        {{ item.label }}
+      </a>
+    }
+  </nav>
 </div>
 
-<!-- Ths part of code is the pc version -->
-<div class="hidden sm:flex sm:flex-1 sm:justify-center sm:items-center sm:grid-cols-12 gap-y-10 border-b-2 border-[#363F59] hover:text-[#0288E0] bg-[#171B26]">
-    <div>
-        <a href="/" class="hover:pointer-event-auto">
-            <img class="m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
-        </a>
-    </div>
-    <div class="flex flex-1 justify-end space-x-4 mr-[2%]">
-        <!-- <a class="{{actual_route == '/' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/">Home</a> -->
-        <a class="{{actual_route == '/project' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/project">Project</a>
-        <a class="{{actual_route == '/cv' ? 'text-[#E7DFDA] disabled-click bg-[#0266A8] rounded-full p-2 font-HelveticaNeue' : 'text-[#E7DFDA] hover:text-[0288E0] p-2 font-HelveticaNeue'}}" href="/cv">My cv</a>
-    </div>
+<!-- Desktop version -->
+<div class="hidden sm:flex sm:items-center border-b-2 border-[#363F59] bg-[#171B26]">
+  <div>
+    <a routerLink="/" class="block">
+      <img class="m-2 w-auto h-14" src="../../../assets/logo_phoenix.webp" alt="logo" />
+    </a>
+  </div>
+  <nav class="flex flex-1 justify-end items-center space-x-4 mr-[2%]">
+    @for (item of navItems; track item.path) {
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="bg-[#0266A8]"
+        class="text-[#E7DFDA] hover:text-[#0288E0] rounded-full px-3 py-2 font-HelveticaNeue transition-colors"
+      >
+        {{ item.label }}
+      </a>
+    }
+  </nav>
 </div>
