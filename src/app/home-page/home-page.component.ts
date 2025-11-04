@@ -1,22 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { HeaderComponent } from '../component/header/header.component';
 import { FooterComponent } from '../component/footer/footer.component';
-import { Meta } from '@angular/platform-browser';
 
 @Component({
-    selector: 'app-home-page',
-    imports: [HeaderComponent, FooterComponent],
-    templateUrl: './home-page.component.html',
+  selector: 'app-home-page',
+  imports: [HeaderComponent, FooterComponent],
+  templateUrl: './home-page.component.html',
+  standalone: true,
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
+  constructor(
+    private meta: Meta,
+    private titleService: Title
+  ) {}
 
-  constructor(private meta: Meta) {
-    this.meta.removeTag('name="description"');
-    this.meta.removeTag('name="title"');
-    this.meta.removeTag('name="keywords"');
-    this.meta.addTag({ name: 'description', content: 'Is starting page of my portfolio.' });
-    this.meta.addTag({name:'title', content:'Portfolio home Page'})
-    this.meta.addTag({name:'keywords', content:'Portfolio, Développeur web, Développeur informatique, Développeur full stack'})
+  ngOnInit(): void {
+    this.setMetaTags();
   }
 
+  private setMetaTags(): void {
+    // Set page title
+    this.titleService.setTitle('Portfolio - Valentin Bancel | Full Stack Developer');
+
+    // Remove any existing meta tags
+    const metaNames = ['description', 'keywords', 'author'];
+    metaNames.forEach(name => this.meta.removeTag(`name="${name}"`));
+
+    // Add updated meta tags
+    this.meta.addTags([
+      {
+        name: 'description',
+        content: 'Portfolio de Valentin Bancel, développeur full stack spécialisé en développement web et intelligence artificielle.'
+      },
+      {
+        name: 'keywords',
+        content: 'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Intelligence Artificielle'
+      },
+      {
+        name: 'author',
+        content: 'Valentin Bancel'
+      }
+    ]);
+  }
 }
