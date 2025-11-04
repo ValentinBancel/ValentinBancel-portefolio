@@ -31,11 +31,11 @@ export class HomePageComponent implements OnInit {
     this.meta.addTags([
       {
         name: 'description',
-        content: 'Portfolio de Valentin Bancel, développeur full stack spécialisé en développement web et intelligence artificielle.'
+        content: 'Développeur full-stack et passionné de data, j\'explore depuis 2018 les liens entre le code, l\'intelligence artificielle et la prise de décision. Spécialisé en IA et data science à Lyon Ynov Campus.'
       },
       {
         name: 'keywords',
-        content: 'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Intelligence Artificielle'
+        content: 'Portfolio, Développeur full-stack, Data science, Intelligence Artificielle, IA, Lyon Ynov Campus, Epitech, Développeur web'
       },
       {
         name: 'author',

@@ -1,29 +1,82 @@
-<div class="min-h-screen bg-[#171B26] text-[#E7DFDA] font-manroperegular flex flex-col">
+<div class="min-h-screen bg-gradient-to-br from-[#171B26] via-[#1a1f2e] to-[#0f1219] text-[#E7DFDA] font-manroperegular flex flex-col relative overflow-hidden">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #0288E0 1px, transparent 0); background-size: 40px 40px;"></div>
+
   <app-header></app-header>
 
-  <main class="flex-grow flex items-center justify-center px-4 py-8">
-    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl">
+  <main class="flex-grow flex items-center justify-center px-6 py-12 lg:py-20 relative z-10">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl">
       <!-- Content Section -->
-      <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 lg:space-y-6">
-        <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold">Valentin Bancel</h1>
-        <h2 class="text-2xl sm:text-4xl lg:text-6xl text-[#E7DFDA]/90">Full stack developer</h2>
-        <p class="text-base sm:text-lg lg:text-2xl text-[#E7DFDA]/80 max-w-2xl leading-relaxed">
-          J'ai commencé à apprendre la programmation en 2018. J'ai rejoint l'école Epitech en 2021
-          et je l'ai quittée fin janvier 2024. Durant cette période j'ai appris les bases de
-          l'intelligence artificielle et je rejoins l'école Ynov Campus afin d'approfondir mes connaissances.
-        </p>
+      <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
+        <!-- Name with gradient effect -->
+        <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-[#E7DFDA] to-[#0288E0] bg-clip-text text-transparent leading-tight">
+          Valentin Bancel
+        </h1>
+
+        <!-- Role with accent -->
+        <div class="flex items-center gap-3 flex-wrap justify-center lg:justify-start">
+          <div class="bg-gradient-to-r from-[#0288E0] to-[#0266A8] rounded-full"></div>
+          <h2 class="text-2xl sm:text-3xl lg:text-5xl text-[#E7DFDA]/90 font-light tracking-wide">
+            Full Stack Developer
+          </h2>
+        </div>
+
+        <!-- Description with improved spacing -->
+        <div class="text-base sm:text-lg lg:text-xl text-[#E7DFDA]/75 max-w-2xl leading-relaxed space-y-5 mt-4">
+          <p class="backdrop-blur-sm bg-white/5 rounded-lg p-6 border border-[#0288E0]/10 hover:border-[#0288E0]/30 transition-all duration-300 shadow-lg hover:shadow-[#0288E0]/20">
+            Développeur full-stack et passionné de data, j'explore depuis 2018 les liens entre le code,
+            l'intelligence artificielle et la prise de décision. Après avoir étudié à Epitech, j'ai choisi
+            Lyon Ynov Campus pour me spécialiser en IA et data science.
+          </p>
+          <p class="backdrop-blur-sm bg-white/5 rounded-lg p-6 border border-[#0288E0]/10 hover:border-[#0288E0]/30 transition-all duration-300 shadow-lg hover:shadow-[#0288E0]/20">
+            Mon approche repose sur une conviction simple : les données racontent une histoire — mon rôle
+            est de leur donner une voix à travers des applications intelligentes, performantes et utiles.
+          </p>
+        </div>
       </div>
 
-      <!-- Image Section -->
-      <div class="flex justify-center lg:justify-end">
-        <img
-          src="../../assets/me_crop.webp"
-          alt="Valentin Bancel"
-          class="rounded-full w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover shadow-2xl"
-        >
+      <!-- Image Section with enhanced effects -->
+      <div class="flex justify-center lg:justify-end animate-fade-in-delayed">
+        <div class="relative group">
+          <!-- Glow effect -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-[#0288E0] to-[#0266A8] rounded-full opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500"></div>
+
+          <!-- Image container -->
+          <div class="relative">
+            <img
+              src="../../assets/me_crop.webp"
+              alt="Valentin Bancel"
+              class="rounded-full w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover shadow-2xl ring-4 ring-[#0288E0]/20 group-hover:ring-[#0288E0]/40 transition-all duration-500 transform group-hover:scale-105"
+            >
+            <!-- Decorative ring -->
+            <div class="absolute inset-0 rounded-full border-2 border-[#0288E0]/30 animate-pulse"></div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <app-footer></app-footer>
 </div>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delayed {
+    animation: fade-in 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+</style>
