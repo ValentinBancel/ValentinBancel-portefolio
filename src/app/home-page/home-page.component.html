@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-gradient-to-br from-[#171B26] via-[#1a1f2e] to-[#0f1219] text-[#E7DFDA] font-manroperegular flex flex-col relative overflow-hidden">
   <!-- Subtle background pattern -->
-  <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #0288E0 1px, transparent 0); background-size: 40px 40px;"></div>
+  <div class="absolute inset-0 opacity-5 background-pattern"></div>
 
   <app-header></app-header>
 
@@ -58,25 +58,3 @@
 
   <app-footer></app-footer>
 </div>
-
-<style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-  }
-
-  .animate-fade-in-delayed {
-    animation: fade-in 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-  }
-</style>
