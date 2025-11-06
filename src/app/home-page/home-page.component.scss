@@ -1,0 +1,24 @@
+.background-pattern {
+  background-image: radial-gradient(circle at 2px 2px, #0288E0 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}

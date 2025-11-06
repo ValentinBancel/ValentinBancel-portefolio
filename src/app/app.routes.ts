@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProjectComponent } from './project/project.component';
-import { CvPageComponent } from './cv_page/cv-page.component';
+import { CvPageComponent } from './cv-page/cv-page.component';
 
 
 export const routes: Routes = [

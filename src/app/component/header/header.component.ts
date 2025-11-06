@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-
-interface NavItem {
-  label: string;
-  path: string;
-}
+import { NavItem } from '../../models';
 
 @Component({
   selector: 'app-header',
