@@ -4,6 +4,7 @@ import { ProjectComponent } from './project/project.component';
 import { CvPageComponent } from './cv-page/cv-page.component';
 
 
+
 export const routes: Routes = [
   {
       path: '',
