@@ -11,6 +11,10 @@
 npm-debug.log
 yarn-error.log
 
+#lighthouse
+.lighthouseci
+lighthouse-reports/
+
 # IDEs and editors
 .idea/
 .project
