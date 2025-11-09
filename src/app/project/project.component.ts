@@ -28,6 +28,13 @@ export class ProjectComponent implements OnInit {
       keywords: 'Portfolio, Développeur web, Développeur informatique, Développeur full stack, Projects, C++, Python3, Van der whaal, Physics, PDF, Tools'
     });
 
-    this.ProjectList = this.projectService.getProjects();
+    this.projectService.getProjects().subscribe({
+      next: (projects) => {
+        this.ProjectList = projects;
+      },
+      error: (error) => {
+        console.error('Error loading projects:', error);
+      }
+    });
   }
 }

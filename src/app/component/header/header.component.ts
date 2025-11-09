@@ -10,6 +10,7 @@ import { NavItem } from '../../models';
 export class HeaderComponent {
   navItems: NavItem[] = [
     { label: 'Project', path: '/project' },
+    { label: 'Services', path: '/services' },
     { label: 'My Cv', path: '/cv' }
   ];
 
