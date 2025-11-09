@@ -1,0 +1,73 @@
+<div class="relative bg-gradient-to-br from-[#2D364B] to-[#1F2937] text-[#E7DFDA] rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(2,102,168,0.3)] hover:scale-[1.02] h-full flex flex-col">
+    <!-- Image avec overlay gradient -->
+    <div class="relative h-56 overflow-hidden">
+        <img *ngIf="service.image_url"
+             class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+             [src]="service.image_url"
+             [alt]="service.title">
+        <div *ngIf="!service.image_url"
+             class="w-full h-full bg-gradient-to-br from-[#0266A8] to-[#0288E0] flex items-center justify-center">
+            <svg class="w-24 h-24 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+            </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#2D364B] via-transparent to-transparent"></div>
+
+        <!-- Badge prix -->
+        <div *ngIf="service.starting_price"
+             class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full shadow-lg font-bold text-sm backdrop-blur-sm">
+            {{service.starting_price | currency:'EUR':'symbol':'1.0-0'}}
+        </div>
+    </div>
+
+    <!-- Contenu de la carte -->
+    <div class="flex-1 flex flex-col px-6 py-5">
+        <!-- Titre et description courte -->
+        <div class="mb-4">
+            <h3 class="font-bold text-2xl mb-2 text-white leading-tight">{{service.title}}</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">{{service.short_description}}</p>
+        </div>
+
+        <!-- Durée -->
+        <div *ngIf="service.duration" class="flex items-center mb-4 text-[#0288E0]">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm font-medium">{{service.duration}}</span>
+        </div>
+
+        <!-- Fonctionnalités -->
+        <div *ngIf="service.features && service.features.length > 0" class="mb-4 flex-1">
+            <h4 class="font-semibold mb-3 text-white flex items-center">
+                <svg class="w-5 h-5 mr-2 text-[#0288E0]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Inclus dans l'offre
+            </h4>
+            <ul class="space-y-2">
+                <li *ngFor="let feature of service.features" class="flex items-start text-sm text-gray-300">
+                    <svg class="w-4 h-4 mr-2 mt-0.5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{{feature}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-700">
+            <span *ngFor="let tag of service.tags"
+                  class="bg-gradient-to-r from-[#0266A8] to-[#0288E0] text-white rounded-full px-3 py-1 text-xs font-semibold shadow-md">
+                {{tag.name}}
+            </span>
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="px-6 pb-5">
+        <button class="w-full bg-gradient-to-r from-[#0266A8] to-[#0288E0] hover:from-[#0288E0] hover:to-[#0266A8] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            En savoir plus
+        </button>
+    </div>
+</div>

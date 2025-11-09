@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Project, Tag } from '../models';
+import { Service } from '../models';
 
 interface ApiResponse<T> {
   count: number;
@@ -14,25 +14,25 @@ interface ApiResponse<T> {
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectService {
+export class ServiceService {
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:8000/api';
 
-  getProjects(): Observable<Project[]> {
-    return this.http.get<ApiResponse<Project>>(`${this.apiUrl}/projects/`)
+  getServices(): Observable<Service[]> {
+    return this.http.get<ApiResponse<Service>>(`${this.apiUrl}/services/`)
       .pipe(
         map(response => response.results)
       );
   }
 
-  getProjectById(id: number): Observable<Project> {
-    return this.http.get<Project>(`${this.apiUrl}/projects/${id}/`);
-  }
-
-  getTags(): Observable<Tag[]> {
-    return this.http.get<ApiResponse<Tag>>(`${this.apiUrl}/tags/`)
+  getActiveServices(): Observable<Service[]> {
+    return this.http.get<ApiResponse<Service>>(`${this.apiUrl}/services/?is_active=true`)
       .pipe(
         map(response => response.results)
       );
+  }
+
+  getServiceById(id: number): Observable<Service> {
+    return this.http.get<Service>(`${this.apiUrl}/services/${id}/`);
   }
 }
