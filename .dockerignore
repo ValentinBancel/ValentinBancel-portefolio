@@ -1,0 +1,15 @@
+node_modules
+dist
+.git
+.github
+.editorconfig
+.gitignore
+*.md
+README.md
+.angular
+karma.conf.js
+tsconfig.spec.json
+src/**/*.spec.ts
+pnpm-lock.yaml
+pnpm-workspace.yaml
+k8s
