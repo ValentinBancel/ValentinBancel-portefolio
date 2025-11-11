@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 interface AnalyticsEvent {
   event_type: 'page_view' | 'click' | 'project_view' | 'service_view' | 'cv_download';
@@ -21,7 +22,7 @@ export class AnalyticsService {
   private http = inject(HttpClient);
   private router = inject(Router);
   private platformId = inject(PLATFORM_ID);
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = environment.apiUrl;
   private sessionId: string;
 
   constructor() {

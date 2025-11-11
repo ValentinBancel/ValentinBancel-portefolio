@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Project, Tag } from '../models';
+import { environment } from '../../environments/environment';
 
 interface ApiResponse<T> {
   count: number;
@@ -16,7 +17,7 @@ interface ApiResponse<T> {
 })
 export class ProjectService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = environment.apiUrl;
 
   getProjects(): Observable<Project[]> {
     return this.http.get<ApiResponse<Project>>(`${this.apiUrl}/projects/`)
