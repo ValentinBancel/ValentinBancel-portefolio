@@ -18,10 +18,7 @@ const targetPath = path.join(__dirname, '../src/environments/environment.ts');
 // Fonction pour lire le fichier .env
 function parseEnvFile(filePath) {
   if (!fs.existsSync(filePath)) {
-    console.error(`❌ Fichier .env non trouvé à ${filePath}`);
-    console.log(`💡 Créez un fichier .env à partir de .env.example`);
-    console.log(`   cp .env.example .env`);
-    process.exit(1);
+    return null;
   }
 
   const envContent = fs.readFileSync(filePath, 'utf8');
@@ -42,11 +39,33 @@ function parseEnvFile(filePath) {
 }
 
 // Lire les variables d'environnement
-const envVars = parseEnvFile(envPath);
+let envVars = {};
+let apiUrl;
+
+// Priorité 1: Variables d'environnement système (Heroku, etc.)
+if (process.env.API_URL) {
+  console.log('📍 Utilisation des variables d\'environnement système');
+  apiUrl = process.env.API_URL;
+} else {
+  // Priorité 2: Fichier .env local
+  console.log('📍 Recherche du fichier .env local...');
+  envVars = parseEnvFile(envPath);
+
+  if (envVars && envVars.API_URL) {
+    apiUrl = envVars.API_URL;
+  } else {
+    console.error('❌ Variable API_URL non trouvée');
+    console.log('💡 Pour le développement local, créez un fichier .env:');
+    console.log('   cp .env.example .env');
+    console.log('💡 Pour Heroku, définissez la config var:');
+    console.log('   heroku config:set API_URL=https://your-api-url.com');
+    process.exit(1);
+  }
+}
 
 // Vérifier que API_URL existe
-if (!envVars.API_URL) {
-  console.error('❌ Variable API_URL non trouvée dans le fichier .env');
+if (!apiUrl) {
+  console.error('❌ Variable API_URL non définie');
   process.exit(1);
 }
 
@@ -56,7 +75,7 @@ const environmentContent = `// Ce fichier est généré automatiquement par scri
 
 export const environment = {
   production: false,
-  apiUrl: '${envVars.API_URL}/api',
+  apiUrl: '${apiUrl}/api',
 };
 `;
 
@@ -64,7 +83,7 @@ export const environment = {
 try {
   fs.writeFileSync(targetPath, environmentContent, 'utf8');
   console.log('✅ Fichier environment.ts généré avec succès !');
-  console.log(`📍 API URL: ${envVars.API_URL}/api`);
+  console.log(`📍 API URL: ${apiUrl}/api`);
 } catch (error) {
   console.error('❌ Erreur lors de la génération du fichier environment.ts:', error);
   process.exit(1);
